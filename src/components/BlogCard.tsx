@@ -12,6 +12,7 @@ interface BlogCardProps {
   width: number;
   height: number;
   borderRadius: string;
+  imageBorderRadius: string;
   linkColor: string;
 }
 
@@ -22,6 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   width,
   height,
   borderRadius,
+  imageBorderRadius,
   linkColor,
 }) => {
   return (
@@ -29,14 +31,23 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <Card
         bodyStyle={{ padding: Space[20] }}
         style={{ width, borderRadius }}
-        cover={<img alt="example" src={imgURL} style={{ width, height }} />}
+        cover={
+          <img
+            alt="example"
+            src={imgURL}
+            style={{ width, height, borderRadius: imageBorderRadius }}
+          />
+        }
       >
         <Meta
           title={<SubHeader>{name}</SubHeader>}
           description={
             <div>
               <Paragraph color="#1F1F1E">{description}</Paragraph>
-              <Link color={linkColor} style={{ textAlign: "end" }}>
+              <Link
+                color={linkColor}
+                style={{ textAlign: "end", paddingBottom: "12px" }}
+              >
                 Read More
               </Link>
             </div>
