@@ -26,7 +26,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   return (
     <div>
-      {" "}
       <Card
         bodyStyle={{ padding: Space[20] }}
         style={{ width, borderRadius }}
