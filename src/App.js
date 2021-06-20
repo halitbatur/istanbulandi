@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "antd/dist/antd.css";
+import BlogCard from "./components/BlogCard";
+import { Space } from "./components/Styles";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlogCard
+        imgURL="https://picsum.photos/200/300"
+        name="Halit"
+        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, repellendus commodi laborum voluptatibus distinctio numquam vitae quos aliquam dolorum unde."
+        width={419}
+        height={249}
+        borderRadius={Space[24]}
+      />
     </div>
   );
 }
