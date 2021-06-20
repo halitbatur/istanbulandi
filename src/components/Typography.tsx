@@ -18,10 +18,12 @@ interface ColorProps {
 export const Paragraph = styled.p<ColorProps>`
   font-size: ${Space[16]};
   color: ${(props) => props.color};
+  margin: 0;
 `;
 
 export const Link = styled.p<ColorProps>`
   font-size: ${Space[20]};
   cursor: pointer;
   color: ${(props) => props.color};
+  margin: 0;
 `;

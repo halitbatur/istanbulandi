@@ -13,6 +13,7 @@ function App() {
         width={419}
         height={249}
         borderRadius={Space[24]}
+        linkColor="#00ACD8"
       />
     </div>
   );

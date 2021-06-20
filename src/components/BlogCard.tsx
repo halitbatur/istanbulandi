@@ -12,6 +12,7 @@ interface BlogCardProps {
   width: number;
   height: number;
   borderRadius: string;
+  linkColor: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
@@ -21,6 +22,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   width,
   height,
   borderRadius,
+  linkColor,
 }) => {
   return (
     <div>
@@ -35,7 +37,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           description={
             <div>
               <Paragraph color="#1F1F1E">{description}</Paragraph>
-              <Link color="#00ACD8" style={{ textAlign: "end" }}>
+              <Link color={linkColor} style={{ textAlign: "end" }}>
                 Read More
               </Link>
             </div>
