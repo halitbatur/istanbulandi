@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
-import { Space } from "./Styles";
+import { Space, Colors } from "./Styles";
 
 export const SectionHeader = styled.header`
   font-size: ${Space[32]};
-  color: #00acd8;
+  color: ${Colors.mainPrimary};
 `;
 
 export const SubHeader = styled.header`
   font-size: ${Space[24]};
-  color: #1f1f1e;
+  color: ${Colors.neutrals[1000]};
 `;
 
 interface ColorProps {

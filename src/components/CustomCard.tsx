@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "antd";
-import { Space } from "./Styles";
+import { Space, Colors } from "./Styles";
 import { SubHeader, Paragraph, Link } from "./Typography";
 
 const { Meta } = Card;
@@ -46,7 +46,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
           title={<SubHeader>{name}</SubHeader>}
           description={
             <div>
-              <Paragraph color="#1F1F1E">{description}</Paragraph>
+              <Paragraph color={Colors.neutrals[1000]}>{description}</Paragraph>
               <Link
                 color={linkColor}
                 style={{ textAlign: "end", paddingBottom: "12px" }}
@@ -57,7 +57,9 @@ const CustomCard: React.FC<CustomCardProps> = ({
           }
         />
         {addHr && (
-          <hr style={{ border: "3px solid #3E1347", margin: "0" }}></hr>
+          <hr
+            style={{ border: `3px solid ${Colors.primary[200]}`, margin: "0" }}
+          ></hr>
         )}
       </Card>
     </div>
