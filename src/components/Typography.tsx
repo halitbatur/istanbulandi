@@ -3,7 +3,7 @@ import { Space } from "./Styles";
 
 export const SectionHeader = styled.header`
   font-size: ${Space[32]};
-  color: #3e1347;
+  color: #00acd8;
 `;
 
 export const SubHeader = styled.header`
