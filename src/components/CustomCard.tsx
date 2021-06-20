@@ -5,7 +5,7 @@ import { SubHeader, Paragraph, Link } from "./Typography";
 
 const { Meta } = Card;
 
-interface BlogCardProps {
+interface CustomCardProps {
   imgURL: string;
   name: string;
   description: string;
@@ -17,7 +17,7 @@ interface BlogCardProps {
   addHr: boolean;
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({
+const CustomCard: React.FC<CustomCardProps> = ({
   imgURL,
   name,
   description,
@@ -64,4 +64,4 @@ const BlogCard: React.FC<BlogCardProps> = ({
   );
 };
 
-export default BlogCard;
+export default CustomCard;
