@@ -14,6 +14,7 @@ interface BlogCardProps {
   borderRadius: string;
   imageBorderRadius: string;
   linkColor: string;
+  addHr: boolean;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
@@ -25,11 +26,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
   borderRadius,
   imageBorderRadius,
   linkColor,
+  addHr,
 }) => {
   return (
     <div>
       <Card
-        bodyStyle={{ padding: Space[20] }}
+        bodyStyle={{ padding: "0" }}
         style={{ width, borderRadius }}
         cover={
           <img
@@ -40,6 +42,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         }
       >
         <Meta
+          style={{ padding: Space[20], textAlign: "left" }}
           title={<SubHeader>{name}</SubHeader>}
           description={
             <div>
@@ -52,8 +55,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
               </Link>
             </div>
           }
-          style={{ textAlign: "left" }}
         />
+        {addHr && (
+          <hr style={{ border: "3px solid #3E1347", margin: "0" }}></hr>
+        )}
       </Card>
     </div>
   );
