@@ -2,17 +2,17 @@ import React from "react";
 import { Space } from "./Styles";
 import styled from "@emotion/styled";
 
-interface ColorProps {
+interface CustomBtnStyleProps {
   backgroundColor: string;
   titleColor: string;
 }
 
-const CustomBtn = styled.button<ColorProps>`
+const CustomBtn = styled.button<CustomBtnStyleProps>`
   width: 179px;
   height: 46px;
   background-color: ${(props) => props.backgroundColor};
   border: none;
-  border-radius: 11px;
+  border-radius: ${Space[12]};
 
   a {
     color: ${(props) => props.titleColor};
