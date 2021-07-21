@@ -1,6 +1,5 @@
 import "./App.css";
 import "antd/dist/antd.css";
-import CustomButton from "./components/CustomButton";
 
 function App() {
   return (
